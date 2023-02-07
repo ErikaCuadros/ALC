@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/modules/Product';
 import { ProductService } from 'src/app/services/cursos-http.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -8,6 +8,10 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './product-form.component.html',
   styleUrls: ['./product-form.component.css']
 })
+
+@Input('ngModel')
+
+
 export class ProductFormComponent implements OnInit {
 
   product: Product = {
@@ -30,8 +34,7 @@ export class ProductFormComponent implements OnInit {
   ngOnInit() {
     const params = this.activatedRoute.snapshot.params;
     if (params['id']) {
-      this.productService.getProduct(params['id'])
-        .subscribe(
+      this.productService.getProduct(params['id']).subscribe(
           res => {
             console.log(res);
             this.product = res;
