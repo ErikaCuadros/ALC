@@ -7,7 +7,7 @@ import { UserService } from './login/user.service';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb+srv://Erika:%3Cpassword%3E@product-nest.me6bnsb.mongodb.net/test', {
+    MongooseModule.forRoot('mongodb+srv://Erika:2123@product-nest.me6bnsb.mongodb.net/test', {
       useNewUrlParser: true,
       useFindAndModify: false,
       useCreateIndex: true
