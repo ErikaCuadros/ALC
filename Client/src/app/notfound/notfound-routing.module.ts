@@ -9,7 +9,11 @@ const routes :  Routes = [
     path: '**',
     component: NotfoundComponent,
   },
-  
+
+  {
+    path: '**',
+    component: NotfoundComponent,
+  },
 ]
 
 

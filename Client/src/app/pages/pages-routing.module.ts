@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
+import { LoginComponent } from '../auth/login/login.component';
+import { RegisterComponent} from '../auth/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StaticModule } from '../static/static.module';
 import { InstructorComponent } from '../instructores/instructo.component';
@@ -12,13 +14,17 @@ import { ProductListComponent } from '../product-list/product-list.component';
 const routes: Routes = [
 
   {
-    path: 'dashboard',
+    path: 'Login',
     component: PagesComponent,
     //Rutas hijas
     children: [
       {
         path: '',
         component: DashboardComponent,
+      },
+      {
+        path: 'login/register',
+        component: RegisterComponent,
       },
       {
         path: 'instructor',
