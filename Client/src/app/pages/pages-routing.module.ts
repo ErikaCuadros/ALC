@@ -3,13 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { StudentComponent } from './student/student.component';
-import { CatalogueComponent } from './catalogue/catalogue.component';
 import { StaticModule } from '../static/static.module';
-import { HomeComponent } from './home/home.component';
-import { CarritoComponent } from '../carrito/carrito.component';
+import { InstructorComponent } from '../instructores/instructo.component';
 import { ChartComponent } from '../chart/chart.component';
-
+import { ProductFormComponent } from '../product-form/product-form.component';
+import { ProductListComponent } from '../product-list/product-list.component';
 
 const routes: Routes = [
 
@@ -23,25 +21,25 @@ const routes: Routes = [
         component: DashboardComponent,
       },
       {
-        path: 'product',
-        component: StudentComponent,
-      },
-      {
-        path: 'catalogue',
-        component: CatalogueComponent,
-      },
-      {
-        path: 'home',
-        component: HomeComponent,
-      },
-      {
-        path: 'carrito',
-        component: CarritoComponent,
+        path: 'instructor',
+        component: InstructorComponent,
       },
       {
         path: 'chart',
         component: ChartComponent,
       },
+      {
+        path: 'product',
+        component: ProductListComponent
+      },
+      {
+        path: 'product/create',
+        component: ProductFormComponent 
+      },
+      {
+        path: 'product/edit/:id',
+        component: ProductFormComponent
+      }
 
 
     ],

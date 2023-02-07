@@ -1,43 +1,37 @@
-import { CreateStudentDto, UpdateStudentDto, StudentModel } from '../modules/student.modul';
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { Inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { Product } from '../modules/Product';
+import { Observable } from 'rxjs'
 
-@Injectable({
-  providedIn: 'root'
-})
+@Inject(String)
 
-export class StudentHttpService {
 
-  readonly API_URL:string = 'http://api.escuelajs.co/api/v1/products'; //declaramaos variable de lectura por que no puede ser modificada 
-  constructor(private httpClient:HttpClient) { }
+export class ProductService {
 
-  getAll():Observable<StudentModel[]> {
-    const url = `${this.API_URL}`
-    return this.httpClient.get<StudentModel[]>(url);
+  BASE_URL: string = 'http://localhost:3000';
+
+  constructor(private http: HttpClient) { }
+
+  getProducts(): Observable<Product[]>{
+    return this.http.get<Product[]>(`${this.BASE_URL}/product`);
   }
 
-//No es un arreglo por que solo retorna un objeto 
-  getOne(id: StudentModel['id']):Observable<StudentModel> {
-    const url = `${this.API_URL}/${id}`
-   return  this.httpClient.get<StudentModel>(url);
+  getProduct(id: string): Observable<Product>{
+    return this.http.get<Product>(`${this.BASE_URL}/product/${id}`);
   }
 
-  store(product: CreateStudentDto):Observable<StudentModel> {
-    const url = `${this.API_URL}`
-   return this.httpClient.post<StudentModel>(this.API_URL, product);
-  }
-//actualizamos solo un objeto
-  update(id: StudentModel['id'], product: UpdateStudentDto):Observable<StudentModel> {
-    const url = `${this.API_URL}/${id}`;
-    return this.httpClient.put<StudentModel>(url, product);
+  createProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(`${this.BASE_URL}/product/create`, product);
   }
 
-  destroy(id: StudentModel['id']):Observable<any> {
-    const url = `${this.API_URL}/${id}`;
-    return this.httpClient.delete<any>(url).pipe(map((response: { rta: boolean; }) => {
-        return response.rta;
-      })
-    )
-  };
+  deleteProduct(id: string): Observable<Product> {
+    console.log(id);
+    return this.http.delete<Product>(`${this.BASE_URL}/product/delete?productID=${id}`);
   }
+
+  updateProduct(id: string, product: Product): Observable<Product> {
+    return this.http.put<Product>(`${this.BASE_URL}/product/update?productID=${id}`, product);
+  }
+
+}
+
