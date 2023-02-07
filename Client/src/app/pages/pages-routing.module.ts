@@ -15,7 +15,7 @@ const routes: Routes = [
 
   {
     path: 'Login',
-    component: PagesComponent,
+    component: LoginComponent,
     //Rutas hijas
     children: [
       {

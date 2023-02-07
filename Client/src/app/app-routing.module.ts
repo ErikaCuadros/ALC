@@ -4,7 +4,7 @@ import { PagesRoutingModule } from './pages/pages-routing.module';
 import { AuthRoutingModule } from './auth/auth-routing.module';
 import { CommonModule } from '@angular/common';
 import { NotfoundRoutingModule } from './notfound/notfound-routing.module';
-import {AuthModule} from './auth/auth.module';
+
 
 
 const routes: Routes = [
@@ -22,7 +22,8 @@ const routes: Routes = [
   AuthRoutingModule,
   NotfoundRoutingModule,
   CommonModule, 
-  AuthModule,],
+  
+],
 
   exports: [RouterModule],
 })
