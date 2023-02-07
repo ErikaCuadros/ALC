@@ -20,9 +20,9 @@ export class MongoConnectionService {
             console.log('Connected to MongoDB');
         })
  
-        this.dbConnection.once('error', () => {
+        /*this.dbConnection.once('error', () => {
             console.log('Error connecting to MongoDB');
-        })
+        })*/
  
     }
      
