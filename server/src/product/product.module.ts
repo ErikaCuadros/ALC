@@ -9,7 +9,7 @@ import { MorganModule } from 'nest-morgan';
 
 @Module({
   imports: [
-    MorganModule.forRoot(),
+    //MorganModule.forRoot(),
     MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }]),
   ],
   providers: [ProductService],

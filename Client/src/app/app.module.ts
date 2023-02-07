@@ -38,7 +38,6 @@ import { ReactiveFormsModule } from '@angular/forms';
         StaticModule,
         NotfoundModule,
         HttpClientModule,
-        FormsModule,
         ReactiveFormsModule
     ]
 })
