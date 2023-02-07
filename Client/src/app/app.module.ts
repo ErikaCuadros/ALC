@@ -7,7 +7,6 @@ import { PagesComponent } from './pages/pages.component';
 import { AuthComponent } from './auth/auth.component';
 import { AuthModule } from './auth/auth.module';
 import { StaticModule } from './static/static.module';
-import { StaticComponent } from './static/static.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { NotfoundModule } from './notfound/notfound.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,7 +23,6 @@ import { ReactiveFormsModule } from '@angular/forms';
         AppComponent,
         PagesComponent,
         AuthComponent,
-        StaticComponent,
         NotfoundComponent,
         ChartComponent,
     ],

@@ -14,13 +14,13 @@ import { ProductListComponent } from '../product-list/product-list.component';
 const routes: Routes = [
 
   {
-    path: 'Login',
-    component: LoginComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
     //Rutas hijas
     children: [
       {
-        path: '',
-        component: DashboardComponent,
+        path: 'pages/dashboard',
+        component: PagesComponent,
       },
       {
         path: 'login/register',
