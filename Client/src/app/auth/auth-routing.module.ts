@@ -17,7 +17,7 @@ const routes :Routes = [
         component: RegisterComponent,
       },
       {
-        path: 'pages/dashboard',
+        path: 'pages',
         component: PagesComponent,
       },
     ]
