@@ -11,8 +11,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { NotfoundModule } from './notfound/notfound.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartComponent } from './chart/chart.component';
-import { ProductFormComponent } from './product-form/product-form.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductFormComponent } from './pages/product-form/product-form.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 

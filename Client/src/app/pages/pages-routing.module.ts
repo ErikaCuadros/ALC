@@ -8,8 +8,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StaticModule } from '../static/static.module';
 import { InstructorComponent } from '../instructores/instructo.component';
 import { ChartComponent } from '../chart/chart.component';
-import { ProductFormComponent } from '../product-form/product-form.component';
-import { ProductListComponent } from '../product-list/product-list.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 const routes: Routes = [
   {
