@@ -12,7 +12,7 @@ export class MongoConnectionService {
  
     async createConnectionDB(){
  
-        const DB_URI = 'mongodb://Erika:2123@product-nest.me6bnsb.mongodb.net:27017/test';
+        const DB_URI = 'mongodb+srv://Erika:2123@product-nest.me6bnsb.mongodb.net/test';
          
         this.dbConnection = await createConnection(DB_URI);
  
