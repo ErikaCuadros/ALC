@@ -29,7 +29,10 @@ const routes: Routes = [
 //routermodule.forRoot :especifica las rutas principales
 @NgModule({  
   imports:[
-  RouterModule.forRoot(routes),    
+  RouterModule.forRoot(routes),
+  PagesRoutingModule,
+  AuthRoutingModule,
+  NotfoundRoutingModule    
 ],
   exports: [RouterModule],
 })

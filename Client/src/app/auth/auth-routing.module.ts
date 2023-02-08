@@ -5,19 +5,26 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PagesComponent } from '../pages/pages.component';
 import { DashboardComponent } from '../pages/dashboard/dashboard.component';
-import { MainComponent } from './main/main.component';
 
 
 const routes :Routes = [
-  {path: '', redirectTo:'login', pathMatch:'full'},
-  { 
-  path: 'login',
-  component: LoginComponent,
-},
-{
-  path: 'login/register',
-  component: RegisterComponent,
-},
+  {
+    path: '',
+    children:[
+      {path: '', redirectTo:'login', pathMatch:'full'},
+      { 
+      path: 'login',
+      component: LoginComponent,
+    },
+    {
+      path: 'login/register',
+      component: RegisterComponent,
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent,
+    },],
+  },
       
     ]
     
@@ -26,10 +33,8 @@ const routes :Routes = [
 @NgModule({
   declarations: [],
   imports: [
+    CommonModule,
     RouterModule.forChild(routes),
-  ],
-  exports:[
-    RouterModule
   ]
 })
 export class AuthRoutingModule {

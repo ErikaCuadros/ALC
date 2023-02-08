@@ -17,7 +17,6 @@ const routes: Routes = [
     component: PagesComponent,
     //Rutas hijas
     children: [
-      {path: '', redirectTo:'dashboard', pathMatch:'full'},
       {
         path: 'dashboard',
         component: DashboardComponent,
@@ -47,14 +46,11 @@ const routes: Routes = [
 ]
 @NgModule({
   declarations: [],
-  
   imports: [
-    
+    CommonModule,
+    StaticModule,
     RouterModule.forChild(routes)
-  ],
-  //Forchild invoca a los hijos
-  exports:[
-    RouterModule
   ]
+  //Forchild invoca a los hijos
 })
 export class PagesRoutingModule { }
