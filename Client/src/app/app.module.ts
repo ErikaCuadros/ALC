@@ -17,25 +17,26 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
-
 @NgModule({
     declarations: [
         AppComponent,
-        PagesComponent,
-        AuthComponent,
+        PagesComponent,        
         NotfoundComponent,
         ChartComponent,
+        AuthComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
     imports: [
-        BrowserModule,
-        AppRoutingModule,
+        BrowserModule,        
+        AppRoutingModule,        
         PagesModule,
         StaticModule,
         NotfoundModule,
         HttpClientModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        AuthModule,
+
     ]
 })
 export class AppModule { }

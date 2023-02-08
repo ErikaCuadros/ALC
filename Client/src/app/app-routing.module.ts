@@ -8,23 +8,29 @@ import { NotfoundRoutingModule } from './notfound/notfound-routing.module';
 
 
 const routes: Routes = [
+  //{path:'', redirectTo:'/login', pathMatch:'full'}
+  {path: '', redirectTo:'auth', pathMatch:'full'},
+  {
+    path: 'auth',
+    loadChildren: () =>
+     import('./auth/auth.module').then(
+        (m) => m.AuthModule
+      ),
+  },
   
-  {path: '', redirectTo:'/login', pathMatch:'full'},//ruta por defecto
- 
-
-
+  {
+    path: 'pages',
+    loadChildren: () =>
+     import('./pages/pages.module').then(
+        (m) => m.PagesModule
+      ),
+  }//ruta por defecto 
 ];
 //routermodule.forRoot :especifica las rutas principales
-@NgModule({
-  declarations: [],
-  imports:[RouterModule.forRoot(routes),
-  PagesRoutingModule,
-  AuthRoutingModule,
-  NotfoundRoutingModule,
-  CommonModule, 
-  
+@NgModule({  
+  imports:[
+  RouterModule.forRoot(routes),    
 ],
-
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

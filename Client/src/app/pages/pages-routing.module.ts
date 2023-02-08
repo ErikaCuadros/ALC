@@ -12,12 +12,12 @@ import { ProductFormComponent } from '../product-form/product-form.component';
 import { ProductListComponent } from '../product-list/product-list.component';
 
 const routes: Routes = [
-
   {
     path: '',
     component: PagesComponent,
     //Rutas hijas
     children: [
+      {path: '', redirectTo:'dashboard', pathMatch:'full'},
       {
         path: 'dashboard',
         component: DashboardComponent,
@@ -42,18 +42,19 @@ const routes: Routes = [
         path: 'product/edit/:id',
         component: ProductFormComponent
       }
-
-
     ],
   },
 ]
 @NgModule({
   declarations: [],
+  
   imports: [
-    CommonModule,
-    StaticModule,
+    
     RouterModule.forChild(routes)
-  ]
+  ],
   //Forchild invoca a los hijos
+  exports:[
+    RouterModule
+  ]
 })
 export class PagesRoutingModule { }
