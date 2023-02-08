@@ -1,10 +1,10 @@
   <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <section id="wrapper" class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);">
-        <div class="login-box card" style="margin-right: 500px;">
+        <div class="login-box card" style="margin-right: 500px; height: 550px; margin-top: 25px; border-radius: 15px;">
             <div class="card-body">
                 <form class="form-horizontal form-material" id="loginform" action="index.html">
-                    <a href="javascript:void(0)" class="text-center db"><img src="../../../assets/images/logo.png" alt="Home" style="height: 80px;"/><br/></a>
+                    <a href="javascript:void(0)" class="text-center db"><img src="../../../assets/images/logo.png" alt="Home" style="height: 80px; margin-top: 15px;"/><br/></a>
                     <div class="form-group m-t-40">
                         <div class="col-xs-12">
                             <input class="form-control" type="text" required="" placeholder="Nombre">
@@ -15,24 +15,24 @@
                             <input class="form-control" type="password" required="" placeholder="Contraseña">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    <div id="to-recover" class="form-group row">
                         <div class="col-md-12">
                             <div class="checkbox checkbox-primary pull-left p-t-0">
                                 <input id="checkbox-signup" type="checkbox" class="filled-in chk-col-light-blue">
                                 <label for="checkbox-signup"> Recuérdame </label>
                             </div>
-                            <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Haz olvidado tu contraseña?</a> </div>
+                            <a href="javascript:void(0)" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> ¿Has olvidado tu contraseña?</a> </div>
                     </div>
-                    <div class="form-group text-center m-t-20">
+                    <div id=registrar class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <a href="dashboard" class="text-info m-l-5">Inicia Sesión</a>
+                            <a id=inicio href="dashboard" class="text-light m-l-5 ">Inicia Sesión</a>
                         </div>
                     </div>
 
 
                     <div class="form-group m-b-0">
                         <div class="col-sm-12 text-center">
-                            No tienes cuenta aún? <a href="login/register" class="text-primary m-l-5"><b>Registrarse</b></a>
+                            ¿No tienes cuenta aún? <a href="login/register" class="text-primary m-l-5"><b>Registrarse</b></a>
                         </div>
                     </div>
                 </form>
