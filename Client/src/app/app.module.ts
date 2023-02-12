@@ -15,6 +15,7 @@ import { ProductFormComponent } from './pages/product-form/product-form.componen
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
+import { TermsComponent } from './terms/terms/terms.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
         PagesComponent,        
         NotfoundComponent,
         ChartComponent,
-        AuthComponent
+        AuthComponent,
+        TermsComponent
     ],
     providers: [],
     bootstrap: [AppComponent],

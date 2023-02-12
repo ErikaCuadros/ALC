@@ -10,6 +10,7 @@ import { InstructorComponent } from '../instructores/instructo.component';
 import { ChartComponent } from '../chart/chart.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { TermsComponent } from '../terms/terms/terms.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path: 'chart',
         component: ChartComponent,
+      },
+      {
+        path: 'terms',
+        component: TermsComponent,
       },
       {
         path: 'product',
