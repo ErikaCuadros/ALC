@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PagesComponent } from '../pages/pages.component';
 import { DashboardComponent } from '../pages/dashboard/dashboard.component';
-import { TermsComponent } from './terms/terms.component';
+
 
 
 const routes :Routes = [
@@ -20,10 +20,6 @@ const routes :Routes = [
     {
       path: 'login/register',
       component: RegisterComponent,
-    },
-    {
-      path: 'terms',
-      component: TermsComponent,
     },],
   },
       
